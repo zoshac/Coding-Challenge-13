@@ -35,3 +35,18 @@ createEmployeeCard("Harry Whitman", "Janitor");
 createEmployeeCard("Kenny Grant", "Analyst"); 
 
 //Task 3 Converting NodeLists to Arrays for Bulk Updates 
+
+function highlightEmployeeCards(){
+    const employeeCards = document.querySelectorAll(".employeeCard");
+    // employee card selection 
+
+    const cardArray = Array.from(employeeCards);
+
+    cardArray.forEach(card => {
+        card.style.backgroundColor = "pink";
+        card.style.border = "2px solid black"
+    });
+// adding background color and borders
+}
+
+highlightEmployeeCards();
