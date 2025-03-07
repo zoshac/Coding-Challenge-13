@@ -33,3 +33,5 @@ function createEmployeeCard (name, position) {
 createEmployeeCard("Maria Johnson", "Cashier");
 createEmployeeCard("Harry Whitman", "Janitor");
 createEmployeeCard("Kenny Grant", "Analyst"); 
+
+//Task 3 Converting NodeLists to Arrays for Bulk Updates 
