@@ -50,3 +50,33 @@ function highlightEmployeeCards(){
 }
 
 highlightEmployeeCards();
+
+// Task 4 Implementing Removal of Employee Cards with Event Bubbling
+
+document.addEventListener("DOMContentLoaded", function (){
+    const container = document.getElementById("employeeContainer");
+
+    if (!container) {
+        console.error("#employee container not found");
+        return;
+    }
+
+    container.addEventListener("click", function(event) {
+        const card = event.target.closest(".employeeCard");
+        if (card && !event.target.classList.contains("remove-btn")) {
+            console.log("Employee card selected", card);
+        }
+    });
+// adding event listener to parent container 
+
+// adding listener to each remove button 
+container.addEventListener("click", function (event) {
+    if (event.target.classList.contains("remove-btn")) {
+        event.stopPropagation();
+        const card = event.target.closest(".employeeCard");
+        if (card) {
+            card.remove();
+        }
+    }
+});
+});
